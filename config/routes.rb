@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   get 'home/about' => 'homes#about'
   
   resources :users
-  resources :books
+  resources :books do
+  resources :book_comments
+  resource :favorites
+end
   
 
 end
